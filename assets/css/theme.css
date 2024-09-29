@@ -13,7 +13,7 @@ Theme	 :  Default
 }
 
 .team-popup-info p {
-    color: #3a516d;
+    color: #3a516d !important;
 }
 
 .accordion-content p {
