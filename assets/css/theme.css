@@ -32,3 +32,15 @@ Theme	 :  Default
 .team-position {
     color: #ffffffce !important;
 }
+
+.nk-block-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 991px) {
+    .oneBondCoinImg {
+        width: 70%;
+    }
+}
