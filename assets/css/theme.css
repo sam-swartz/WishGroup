@@ -49,8 +49,92 @@ Theme	 :  Default
     width: 100%;
 }
 
+.bg-theme .roadmap-line {
+    background: rgb(236, 177, 0);
+    border-color: rgb(236, 177, 0);
+}
+
+.readmap-item-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.readmap-item-wrap .roadmap-icon .roadmap-step {
+    display: flex;
+    width: fit-content;
+    border-radius: 50px;
+    padding: 16px 20px;
+    border-color: rgb(236, 177, 0);
+    align-items: center;
+    justify-content: center;
+}
+
+.readmap-item-wrap .roadmap-left.roadmap-icon .roadmap-step {
+    margin-left: auto;
+}
+
+.readmap-item-wrap .roadmap-right.roadmap-icon .roadmap-step {
+    margin-right: auto;
+}
+
+.readmap-item-wrap .roadmap-step {
+    border-color: rgb(236, 177, 0);
+}
+
+.bg-theme .roadmap-step:after,
+.bg-theme-dark .roadmap-step:after {
+    background: rgb(236, 177, 0);
+    border-color: rgb(236, 177, 0);
+}
+
+@media screen and (min-width: 992px) {
+    .roadmap-left {
+        display: block;
+        margin: unset;
+    }
+    .roadmap-right {
+        display: block;
+        margin: unset;
+    }
+}
+
 @media screen and (max-width: 991px) {
     .oneBondCoinImg {
         width: 70%;
+    }
+    .readmap-item-wrap .roadmap-icon {
+        order: 1;
+    }
+    .readmap-item-wrap .roadmap-content {
+        order: 2;
+    }
+    .readmap-item-wrap .roadmap-left.roadmap-icon .roadmap-step {
+        margin-left: 50px;
+    }
+    .readmap-item-wrap .roadmap-right.roadmap-icon .roadmap-step {
+        margin-right: 50px;
+    }
+    /* .readmap-item-wrap .roadmap-icon .roadmap-step {
+        border: none;
+    } */
+    /* .bg-theme .roadmap-icon .roadmap-step:after,
+    .bg-theme-dark .roadmap-icon .roadmap-step:after,
+    .bg-theme .roadmap-icon .roadmap-step::before,
+    .bg-theme .roadmap-icon-dark .roadmap-step:before {
+        background: none;
+    } */
+    .readmap-item-wrap {
+        display: grid;
+        grid-template-columns: 112px auto;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .readmap-item-wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .readmap-item-wrap .roadmap-icon {
+        display: none;
     }
 }
