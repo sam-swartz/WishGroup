@@ -45,6 +45,10 @@ Theme	 :  Default
     color: #ffffffce;
 }
 
+.chart-data {
+    width: 100%;
+}
+
 @media screen and (max-width: 991px) {
     .oneBondCoinImg {
         width: 70%;
