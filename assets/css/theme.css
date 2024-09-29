@@ -28,3 +28,7 @@ Theme	 :  Default
 .input-bordered::placeholder {
     color: #ffffffce;
 }
+
+.team-position {
+    color: #ffffffce !important;
+}
