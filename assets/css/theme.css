@@ -20,3 +20,11 @@ Theme	 :  Default
 .accordion-content p {
     color: #3a516d;
 }
+
+.oneBondCoin-02 {
+    width: -20%;
+}
+
+.input-bordered::placeholder {
+    color: #ffffffce;
+}
