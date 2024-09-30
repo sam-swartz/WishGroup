@@ -37,8 +37,8 @@ $(document).ready(function() {
         var cardRect = card[0].getBoundingClientRect();
         var cardCenterX = cardRect.left + cardRect.width / 2;
         var cardCenterY = cardRect.top + cardRect.height / 2;
-        var angleY = -(e.clientX - cardCenterX) / 15;
-        var angleX = (e.clientY - cardCenterY) / 15;
+        var angleY = -(e.clientX - cardCenterX) / 25;
+        var angleX = (e.clientY - cardCenterY) / 25;
 
         card.css('transform', `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(20px)`);
     }).on('mouseleave', function() {
