@@ -114,15 +114,6 @@ Theme	 :  Default
     .readmap-item-wrap .roadmap-right.roadmap-icon .roadmap-step {
         margin-right: 50px;
     }
-    /* .readmap-item-wrap .roadmap-icon .roadmap-step {
-        border: none;
-    } */
-    /* .bg-theme .roadmap-icon .roadmap-step:after,
-    .bg-theme-dark .roadmap-icon .roadmap-step:after,
-    .bg-theme .roadmap-icon .roadmap-step::before,
-    .bg-theme .roadmap-icon-dark .roadmap-step:before {
-        background: none;
-    } */
     .readmap-item-wrap {
         display: grid;
         grid-template-columns: 112px auto;
