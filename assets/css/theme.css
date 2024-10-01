@@ -334,3 +334,75 @@ Theme	 :  Default
         max-width: 400px;
     }
 }
+
+
+/* oneBond custom card */
+
+.oneBond_card_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.oneBond_info_card {
+    background: linear-gradient(145deg, #111827, #1e293b);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.1s ease;
+}
+
+.oneBond_info_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.oneBond_info_card:nth-child(3) {
+    grid-column: 1 / -1;
+}
+
+.oneBond_card_icon {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.oneBond_info_card h2 {
+    margin-bottom: 15px;
+}
+
+.oneBond_info_card p {
+    line-height: 1.6;
+}
+
+.oneBond_card_particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 3s infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .oneBond_card_container {
+        grid-template-columns: 1fr;
+    }
+    .oneBond_info_card:nth-child(3) {
+        grid-column: auto;
+    }
+}
