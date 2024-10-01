@@ -439,10 +439,9 @@ Theme	 :  Default
     }
     /* mission */
     
-    .mission-bg {
+    .container-bg {
         width: 100%;
         height: 100%;
-        background: url(../images/mission/mission_bg.jpg) no-repeat;
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
@@ -450,6 +449,10 @@ Theme	 :  Default
         z-index: 2;
         position: absolute;
         top: 0;
+    }
+    
+    .mission-bg {
+        background: url(../images/mission/mission_bg.jpg) no-repeat;
     }
     /* banner video */
     
