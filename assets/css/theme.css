@@ -262,6 +262,7 @@ Theme	 :  Default
 @media (max-width: 768px) {
     .pricing-container {
         grid-template-columns: 1fr;
+        justify-items: center;
     }
 }
 
