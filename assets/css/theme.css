@@ -437,6 +437,15 @@ Theme	 :  Default
     .ourCompany-carousel .owl-dots {
         margin-top: 60px;
     }
+    /* custom carousel */
+    
+    .owl-dot {
+        background: #ffc107 !important;
+    }
+    
+    .owl-dot.active {
+        background: #ff9800 !important;
+    }
     /* mission */
     
     .container-bg {
