@@ -437,6 +437,7 @@ Theme	 :  Default
     .ourCompany-carousel .owl-dots {
         margin-top: 60px;
     }
+    /* mission */
     
     .mission-bg {
         width: 100%;
@@ -449,4 +450,17 @@ Theme	 :  Default
         z-index: 2;
         position: absolute;
         top: 0;
+    }
+    /* banner video */
+    
+    .bg-video-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        /* Behind the content */
     }

@@ -94,3 +94,50 @@ $(document).ready(function() {
         });
     });
 });
+
+
+// custom video player for local
+
+NioApp.Plugins.videoBG = function() {
+    var $videobg = $(".bg-video");
+
+    if ($videobg.exists()) {
+        $videobg.each(function() {
+            var $this = $(this),
+                $that = $this.parent(),
+                overlay = $this.data('overlay'),
+                opacity = $this.data('opacity'),
+                overlay_type = (typeof overlay !== 'undefined' && overlay) ? overlay : false,
+                opacity_value = (typeof opacity !== 'undefined' && opacity) ? opacity : false;
+
+            if (!$that.hasClass('has-bg-video')) {
+                $that.addClass('has-bg-video');
+            }
+
+            if (overlay_type) {
+                if (!$this.hasClass('overlay-' + overlay_type)) {
+                    $this.addClass('overlay');
+                    $this.addClass('overlay-' + overlay_type);
+                }
+            } else {
+                if (!$this.hasClass('overlay-fall')) {
+                    $this.addClass('overlay-fall');
+                }
+            }
+            if (opacity_value) {
+                $this.addClass('overlay-opacity-' + opacity_value);
+            }
+
+            // Check if it's a local video
+            if ($this.hasClass('bg-video-local')) {
+                // Local video is already included in the HTML
+                var videoElement = $this.find('video.bg-video-content');
+                if (videoElement.length) {
+                    videoElement.get(0).play(); // Ensure the video starts playing
+                }
+            }
+        });
+    }
+};
+
+NioApp.components.docReady.push(NioApp.Plugins.videoBG);
