@@ -631,9 +631,21 @@ Theme	 :  Default
     
     .tab-content-custom .nk-block-screen-large {
         width: 60%;
+        border-radius: 20px;
     }
     
     .project_card_wrap {
         position: absolute;
         right: 0;
+    }
+    
+    .project_info {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #project .btn {
+        padding: 20px 30px;
     }
