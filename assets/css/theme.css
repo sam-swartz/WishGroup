@@ -580,3 +580,12 @@ Theme	 :  Default
         z-index: -1;
         /* Behind the content */
     }
+    /* custom contact us */
+    
+    .bg-cover {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: relative;
+    }
