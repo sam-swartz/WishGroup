@@ -40,9 +40,9 @@ $(document).ready(function() {
         var angleY = -(e.clientX - cardCenterX) / 25;
         var angleX = (e.clientY - cardCenterY) / 25;
 
-        card.css('transform', `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(20px)`);
+        card.css('transform', `perspective(2000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(20px)`);
     }).on('mouseleave', function() {
-        $(this).css('transform', 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)');
+        $(this).css('transform', 'perspective(2000px) rotateX(0) rotateY(0) translateZ(0)');
     });
 });
 
@@ -79,9 +79,9 @@ $(document).ready(function() {
         var angleY = -(e.clientX - cardCenterX) / 25;
         var angleX = (e.clientY - cardCenterY) / 25;
 
-        card.css('transform', `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(20px)`);
+        card.css('transform', `perspective(3000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(20px)`);
     }).on('mouseleave', function() {
-        $(this).css('transform', 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)');
+        $(this).css('transform', 'perspective(3000px) rotateX(0) rotateY(0) translateZ(0)');
     });
 });
 

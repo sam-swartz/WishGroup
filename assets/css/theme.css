@@ -5,6 +5,23 @@ Theme	 :  Default
 * Updated	 :	11/22/2022
 */
     /*! WRITE YOUR CUSTOM STYLE **/
+    /* custom text */
+    
+    @media screen and (max-width: 991px) {
+        .text-center-responsive {
+            text-align: center;
+        }
+    }
+    /* custom container */
+    
+    .row-gap-40 {
+        row-gap: 40px;
+    }
+    /* custom img */
+    
+    .our_business_img img {
+        max-width: 160px;
+    }
     
     .btn-grad-alternet {
         background-image: linear-gradient(90deg, rgba(223, 130, 0, 1) 0%, rgba(253, 216, 29, 1) 50%, rgba(232, 175, 2, 1) 100%);
@@ -348,15 +365,10 @@ Theme	 :  Default
     
     .oneBond_card_container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
         max-width: 1400px;
         margin: 0 auto;
         padding: 20px;
-    }
-    
-    .oneBond_card_container :nth-child(1) {
-        grid-column: 1 / 3;
     }
     
     .oneBond_info_card {
@@ -368,7 +380,6 @@ Theme	 :  Default
         padding: 40px;
         display: flex;
         flex-direction: column;
-        text-align: center;
         transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
         position: relative;
         overflow: hidden;
@@ -410,13 +421,13 @@ Theme	 :  Default
         transform: scale(1.1);
     }
     
-    .oneBond_info_card h4 {
+    .oneBond_info_card .oneBond_info_card_title {
         color: #ffc107;
         font-size: 1.5em;
         position: relative;
     }
     
-    .oneBond_info_card h4::after {
+    .oneBond_info_card .oneBond_info_card_title::after {
         content: '';
         position: absolute;
         bottom: -10px;
@@ -428,7 +439,7 @@ Theme	 :  Default
         transition: width 0.5s ease;
     }
     
-    .oneBond_info_card:hover h4::after {
+    .oneBond_info_card:hover .oneBond_info_card_title::after {
         width: 50px;
     }
     
@@ -522,6 +533,15 @@ Theme	 :  Default
             max-width: 400px;
         }
     }
+    /* mission card */
+    
+    #mission .oneBond_card_container :nth-child(1) {
+        grid-column: 1 / 3;
+    }
+    
+    #mission .oneBond_card_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
     /* custom team */
     
     .custom-team {
@@ -580,7 +600,7 @@ Theme	 :  Default
         z-index: -1;
         /* Behind the content */
     }
-    /* custom contact us */
+    /* custom bg */
     
     .bg-cover {
         background-size: cover;
@@ -588,4 +608,32 @@ Theme	 :  Default
         background-repeat: no-repeat;
         background-attachment: fixed;
         position: relative;
+    }
+    
+    .bg-cover-repeat {
+        background-repeat: repeat !important;
+    }
+    
+    .bg-cover-repeatX {
+        background-repeat: repeat-x !important;
+    }
+    
+    .bg-cover-repeatY {
+        background-repeat: repeat-y !important;
+    }
+    /* custom tabs */
+    
+    .tab-nav-custom {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .tab-content-custom .nk-block-screen-large {
+        width: 60%;
+    }
+    
+    .project_card_wrap {
+        position: absolute;
+        right: 0;
     }
