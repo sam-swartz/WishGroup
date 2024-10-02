@@ -51,7 +51,7 @@ $(document).ready(function() {
 // oneBond custom card
 
 $(document).ready(function() {
-    $('.oneBond_card_info').each(function() {
+    $('.oneBond_info_card').each(function() {
         var card = $(this);
         var particleZones = card.find('.particle-zone');
         particleZones.each(function() {
@@ -71,7 +71,7 @@ $(document).ready(function() {
     });
 
     // 3D tilt effect
-    $('.oneBond_card_info').on('mousemove', function(e) {
+    $('.oneBond_info_card').on('mousemove', function(e) {
         var card = $(this);
         var cardRect = card[0].getBoundingClientRect();
         var cardCenterX = cardRect.left + cardRect.width / 2;
@@ -131,3 +131,41 @@ NioApp.Plugins.videoBG = function() {
 };
 
 NioApp.components.docReady.push(NioApp.Plugins.videoBG);
+
+// Card flip logic only for screens less than 768px
+function isMobile() {
+    return window.innerWidth <= 991;
+}
+
+$('.front-click').on('click', function() {
+    if (isMobile()) {
+        $('.swap-card').toggleClass('active');
+
+        // Optional: Delay or sequence animation for better visual experience
+        setTimeout(() => {
+            $('.back-card').css('z-index', $('.back-card').hasClass('active') ? '2' : '1');
+            $('.front-card').css('z-index', $('.front-card').hasClass('active') ? '1' : '2');
+        }, 100);
+    }
+});
+
+$('.back-click').on('click', function() {
+    if (isMobile()) {
+        $('.swap-card').removeClass('active');
+
+        setTimeout(() => {
+            $('.back-card').css('z-index', '1');
+            $('.front-card').css('z-index', '2');
+        }, 100);
+    }
+});
+
+// Optionally, you can add an event listener to check when the window is resized
+window.addEventListener('resize', function() {
+    if (isMobile()) {
+        // Re-apply any necessary styles or reset the card state
+        $('.swap-card').removeClass('active');
+        $('.back-card').css('z-index', '1');
+        $('.front-card').css('z-index', '2');
+    }
+});
