@@ -24,6 +24,10 @@ Theme	 :  Default
     row-gap: 40px;
 }
 
+.row-gap-60 {
+    row-gap: 60px;
+}
+
 .row-gap-80 {
     row-gap: 80px;
 }
@@ -174,7 +178,7 @@ Theme	 :  Default
 
 @media screen and (max-width: 991px) {
     .our_story-txt {
-        text-align: center;
+        text-align: start;
     }
     .oneBondCoinImg {
         width: 70%;
