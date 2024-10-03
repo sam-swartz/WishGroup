@@ -24,6 +24,10 @@ Theme	 :  Default
     row-gap: 40px;
 }
 
+.row-gap-80 {
+    row-gap: 80px;
+}
+
 
 /* custom img */
 
@@ -110,9 +114,40 @@ Theme	 :  Default
     border-color: rgb(236, 177, 0);
 }
 
+
+/* Our Story */
+
+.ourStoryImg {
+    border-radius: 100%;
+    width: 80%;
+}
+
 .our_story-txt {
     text-align: justify;
-    max-width: 600px;
+}
+
+@media screen and (max-width: 1200px) {
+    .ourStoryImg {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .ourStoryImg {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ourStoryImg {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .ourStoryImg {
+        width: 70%;
+    }
 }
 
 
