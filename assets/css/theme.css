@@ -570,6 +570,15 @@ Theme	 :  Default
     grid-template-columns: repeat(2, 1fr);
 }
 
+@media screen and (max-width: 991px) {
+    #mission .oneBond_card_container :nth-child(1) {
+        grid-column: unset;
+    }
+    #mission .oneBond_card_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 
 /* custom team */
 
