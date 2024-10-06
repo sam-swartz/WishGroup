@@ -8,10 +8,15 @@ Theme	 :  Default
 /*! WRITE YOUR CUSTOM STYLE **/
 
 /* custom text */
-
-@media screen and (max-width: 991px) {
+.text-center-responsive-rev {
+  text-align: center;
+}
+@media screen and (max-width: 992px) {
   .text-center-responsive {
     text-align: center;
+  }
+  .text-center-responsive-rev {
+    text-align: start;
   }
 }
 
@@ -27,12 +32,6 @@ Theme	 :  Default
 
 .row-gap-80 {
   row-gap: 80px;
-}
-
-/* custom img */
-
-.our_business_img img {
-  max-width: 160px;
 }
 
 .btn-grad-alternet {
@@ -790,60 +789,97 @@ Theme	 :  Default
 }
 
 .our-business_section {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px;
   box-sizing: border-box;
+  overflow: hidden;
+  background-size: 120% auto;
+  background-repeat: no-repeat;
+}
+
+.our-business_section .content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.our-business_section .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.our-business_section .nk-block-img {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.our-business_section .our_business_img img {
+  max-width: 100%;
+  height: auto;
 }
 
 #our-business_section1 {
-    background-color: #1a1a1a; /* Dark Charcoal */
+  background-color: #1a1a1a;
 }
-
-
 #our-business_section2 {
-    background-color: rgb(236, 177, 0); /* Base Golden Yellow */
-    
+  background-color: rgb(236, 177, 0);
 }
-#our-business_section2 .title  {
-    color: #000;
-}
-
-#our-business_section2 .title-s5:after {
-    background-color: #000;
-}
-
-#our-business_section2 .section-head-s2 .title:before{
-    background-image: linear-gradient(180deg, #000 0%, #ffffffde 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 #our-business_section3 {
-    background-color: #333333; /* Dim Gray for contrast */
+  background-color: #333333;
 }
-
 #our-business_section4 {
-    background-color: #f2c94c; /* Softened Golden Yellow */
+  background-color: #f2c94c;
 }
-
-#our-business_section4 .title  {
-    color: #000;
-}
-
-#our-business_section4 .title-s5:after {
-    background-color: #000;
-}
-
-#our-business_section4 .section-head-s2 .title:before{
-    background-image: linear-gradient(180deg, #000 0%, #ffffffde 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-
 #our-business_section5 {
-    background-color: #121212; /* Deep Midnight Black */
+  background-color: #121212;
+}
+#our-business_section6 {
+  background-color: #2c2c2c; /* Sleek Dark Slate Gray */
+}
+
+#our-business_section2 .title,
+#our-business_section4 .title {
+  color: #000;
+}
+
+#our-business_section2 .title-s5:after,
+#our-business_section4 .title-s5:after {
+  background-color: #000;
+}
+
+#our-business_section2 .section-head-s2 .title:before,
+#our-business_section4 .section-head-s2 .title:before {
+  background-image: linear-gradient(180deg, #000 0%, #ffffffde 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 992px) {
+  .our-business_section {
+    padding: 20px;
+  }
+  .our-business_section .section-head.section-head-s2 {
+    padding: 0;
+  }
+  .our-business_section .our_business_img img {
+    width: 50%;
+  }
+  .title-xl {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .our-business_section {
+    padding: 10px;
+  }
+  .our-business_section .row {
+    margin-bottom: -50px !important;
+  }
+  .our-business_section .our_business_img img {
+    width: 40%;
+  }
 }

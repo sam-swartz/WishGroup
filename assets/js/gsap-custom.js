@@ -1,30 +1,56 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// Pin the title section
-ScrollTrigger.create({
-  trigger: ".our-business_banner",
-  start: "top top",
-  endTrigger: ".our-business_section",
-  end: "bottom top", // Ends when the first our-business_section hits the top
-  pin: true,
-  pinSpacing: false
-});
-
-const sections = gsap.utils.toArray('.our-business_section');
-
-sections.forEach((section) => {
-
+function initScrollAnimations() {
+  const sections = gsap.utils.toArray('.our-business_section');
+  
+  // Pin the title section
   ScrollTrigger.create({
-    trigger: section,
-    start: "top top",  // Start pinning when the section hits the top of the viewport
+    trigger: ".our-business_banner",
+    start: "top top",
+    endTrigger: ".our-business_section",
+    end: "bottom top", 
     pin: true,
-    pinSpacing: false,  // Remove default spacing, so sections overlap perfectly
-    scrub: true,        // Smooth scrolling effect
-    snap: {
-      snapTo: 1 / (sections.length - 1),  // Snap to each section
-      duration: { min: 0.2, max: 0.5 },   // Smooth snapping
-      ease: "power1.inOut"
-    },
-    markers: false,     // Remove markers for clean UI
+    pinSpacing: false
   });
-});
+
+  sections.forEach((section, index) => {
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top top",
+      pin: true,
+      pinSpacing: false,  
+      scrub: true,       
+      snap: {
+        snapTo: 1 / (sections.length - 1),
+        duration: { min: 0.2, max: 0.5 },
+        ease: "power1.inOut"
+      },
+    });
+
+    // Add fade-in animation for content
+    gsap.from(section.querySelector('.content'), {
+      opacity: 0,
+      y: 50,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: section,
+        start: "top center",
+        toggleActions: "play none none reverse"
+      }
+    });
+  });
+}
+
+function handleResize() {
+  // Kill all ScrollTrigger instances
+  ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+  
+  // Reinitialize animations
+  initScrollAnimations();
+}
+
+// Initialize animations
+initScrollAnimations();
+
+// Add resize event listener
+window.addEventListener('resize', gsap.debounce(handleResize, 250));
