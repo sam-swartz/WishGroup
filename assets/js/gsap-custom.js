@@ -2,27 +2,27 @@ gsap.registerPlugin(ScrollTrigger);
 
 function initScrollAnimations() {
   const sections = gsap.utils.toArray('.our-business_section');
-
+  
   // Pin the title section
   ScrollTrigger.create({
     trigger: ".our-business_banner",
     start: "top top",
     endTrigger: ".our-business_section",
-    end: "bottom top",
+    end: "bottom top", 
     pin: true,
     pinSpacing: false
   });
 
   sections.forEach((section, index) => {
     const isLastSection = index === sections.length - 1;
-
+    
     ScrollTrigger.create({
       trigger: section,
       start: "top top",
       end: isLastSection ? "bottom bottom" : "bottom top",
       pin: true,
-      pinSpacing: false,
-      scrub: true,
+      pinSpacing: false,  
+      scrub: true,       
       snap: {
         snapTo: 1 / (sections.length - 1),
         duration: { min: 0.2, max: 0.5 },
@@ -57,7 +57,7 @@ function initScrollAnimations() {
 function handleResize() {
   // Kill all ScrollTrigger instances
   ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-
+  
   // Reinitialize animations
   initScrollAnimations();
 }

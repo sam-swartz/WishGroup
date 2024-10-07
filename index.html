@@ -15,20 +15,17 @@
     <!-- Bundle and Base CSS -->
     <link href="./assets/css/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/vendor.bundle.css?ver=210" />
-    <link rel="stylesheet" href="assets/css/style-dark.css?ver=210" />
+    <link rel="stylesheet" href="assets/css/style-zinnia.css?ver=210" />
     <!-- Extra CSS -->
     <link rel="stylesheet" href="assets/css/theme.css?ver=210" />
   </head>
 
-  <body class="nk-body body-wider theme-dark mode-onepage">
+  <body class="nk-body body-wider mode-onepage">
     <div class="nk-wrap">
-      <header
-        class="nk-header page-header is-transparent is-sticky is-shrink is-dark"
-        id="header"
-      >
+      <header class="nk-header page-header is-sticky is-shrink" id="header">
         <!-- Header @s -->
-        <div class="header-main">
-          <div class="header-container container">
+        <div class="header-main custom-header-main">
+          <div class="header-container header-container-s1">
             <div class="header-wrap">
               <!-- Logo @s -->
               <div
@@ -37,7 +34,18 @@
                 data-delay=".65"
               >
                 <a href="./" class="logo-link">
-                  <h3 class="logo-light">One Bond</h3>
+                  <img
+                    class="logo-dark"
+                    src="images/logo/wish_group-logo.png"
+                    srcset="images/logo2x.png 2x"
+                    alt="logo"
+                  />
+                  <img
+                    class="logo-light"
+                    src="images/logo/wish_group-logo.png"
+                    srcset="images/logo-full-white2x.png 2x"
+                    alt="logo"
+                  />
                 </a>
               </div>
               <!-- Menu Toogle @s -->
@@ -45,7 +53,7 @@
                 <a
                   href="#"
                   class="navbar-toggle"
-                  data-menu-toggle="example-menu-04"
+                  data-menu-toggle="header-menu"
                 >
                   <div class="toggle-line">
                     <span></span>
@@ -54,9 +62,9 @@
               </div>
               <!-- Menu @s -->
               <div class="header-navbar header-navbar-s1">
-                <nav class="header-menu" id="example-menu-04">
+                <nav class="header-menu justify-content-end" id="header-menu">
                   <ul
-                    class="menu menu-s2 animated"
+                    class="menu animated remove-animation"
                     data-animate="fadeInDown"
                     data-delay=".75"
                   >
@@ -83,14 +91,14 @@
                     </li>
                   </ul>
                   <ul
-                    class="menu-btns animated"
+                    class="menu-btns align-items-center animated remove-animation"
                     data-animate="fadeInDown"
                     data-delay=".85"
                   >
                     <li>
                       <a
                         href="https://drive.google.com/file/d/1gRZhWEAkCkrOusptRotSRktp_LGZmnnH/view"
-                        class="btn btn-rg btn-auto btn-outline btn-grad on-bg-theme btn-round"
+                        class="btn btn-md btn-round btn-outline btn-auto btn-primary"
                         ><span>Whitepaper</span></a
                       >
                     </li>
@@ -99,7 +107,7 @@
                         href="#"
                         data-bs-toggle="modal"
                         data-bs-target="#login-popup"
-                        class="btn btn-rg btn-auto btn-outline btn-grad on-bg-theme btn-round"
+                        class="btn btn-md btn-round btn-outline btn-auto btn-primary"
                         ><span>Try App</span></a
                       >
                     </li>
@@ -111,17 +119,12 @@
           </div>
         </div>
         <!-- .header-main @e -->
-
         <!-- Banner @s -->
         <div class="header-banner bg-theme-grad">
           <div class="nk-banner">
             <div class="banner banner-fs banner-single">
               <!-- .nk-banner -->
-              <div
-                class="bg-video bg-video-local"
-                data-overlay="theme"
-                data-opacity="10"
-              >
+              <div class="bg-video bg-video-local">
                 <video autoplay muted loop class="bg-video-content">
                   <source
                     src="./images/video/MosaicPhotoFramesIntro_free.mp4"
@@ -135,63 +138,67 @@
         </div>
         <!-- .banner @e -->
       </header>
-
       <main class="nk-pages">
         <!-- // -->
-        <section class="section" id="ourStory" data-aos="fade-up">
-          <div class="container container-xxl">
+        <section class="section bg-white pb-0 ov-h" id="about">
+          <div class="ui-shape ui-shape-s3"></div>
+          <div class="container">
             <!-- Block @s -->
-            <div class="nk-block nk-block-about">
-              <div
-                class="row justify-content-between align-items-center gutter-vr-40px"
-              >
-                <div class="col-lg-6 order-lg-last">
+            <div class="nk-block nk-block-about text-center">
+              <div class="row justify-content-center gutter-vr-30px">
+                <div class="col-lg-10">
+                  <div class="section-head section-head-about section-head-s2">
+                    <h2
+                      class="title fw-6 animated"
+                      data-animate="fadeInUp"
+                      data-delay=".1"
+                      title="Story"
+                    >
+                      Our Story
+                    </h2>
+
+                    <p
+                      class="fw-4 tc-dark animated"
+                      data-animate="fadeInUp"
+                      data-delay=".2"
+                    >
+                      WISH GROUP, a diversified company with a global presence
+                      in 7 countries and 33 local channels, operates 33
+                      companies in Investments, Projects, and Trading. With
+                      plans for 10 international and local landmark projects,
+                      the group is currently advancing 4 Mega Projects.
+                    </p>
+                    <p
+                      class="fw-4 tc-dark animated"
+                      data-animate="fadeInUp"
+                      data-delay=".3"
+                    >
+                      Through powerful collaboration between local entrepreneurs
+                      and high-profile global investors, WISH GROUP brings a
+                      shared vision to life, offering investors multiple avenues
+                      for project development. Additionally, the group is
+                      actively involved in high-return trading across various
+                      sectors, beyond any single business focus.
+                    </p>
+                  </div>
+                </div>
+                <!-- .col -->
+                <div class="col-lg-8">
                   <div
-                    class="nk-block-img nk-block-img nk-block-ca text-center text-lg-start"
-                    data-aos="fade-left"
+                    class="nk-block-video tc-light animated"
+                    data-animate="fadeInUp"
+                    data-delay=".3"
                   >
-                    <div class="nk-circle-animation nk-df-center slow"></div>
                     <img
                       class="ourStoryImg"
-                      src="./images/our_story/01.png"
+                      src="./images/our_story/our_story.jpg"
                       alt=""
                     />
                   </div>
                 </div>
-                <div class="col-lg-5">
-                  <div class="nk-block-text wide-auto-sm">
-                    <h2 class="title title-semibold" data-aos="fade-right">
-                      Our Story
-                    </h2>
-
-                    <div class="our_story-txt" data-aos="fade-right">
-                      <p>
-                        WISH GROUP take pleasure in introducing ourselves to
-                        you, WISH Group, a diversified group of companies. WISH
-                        GROUP, with an international network having its footstep
-                        in 7 countries around the globe, 33 local channels,
-                        operates 33 companies under the group and formed to
-                        perform in the international business arena in the areas
-                        of Investments, Projects and Trading. WISH GROUP is all
-                        set to create 10 international and local landmark
-                        projects and is currently stepping up with 04 Mega
-                        Projects.
-                      </p>
-                      <p>
-                        Powerful collaboration of local entrepreneurs with the
-                        most highprofile Investors in the world brings a
-                        globally converted vision to WISH GROUP and the
-                        investors will be introduced to several avenues through
-                        which the company will be functioning to develop
-                        projects. Trading is another activity of WISGH GROUP and
-                        is engaged in and is not limited to any single business
-                        but is actively involved in all kinds of high return
-                        trade.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <!-- .col -->
               </div>
+              <!-- .row -->
             </div>
             <!-- .block @e -->
           </div>
@@ -199,131 +206,177 @@
         <!-- // -->
 
         <!-- // -->
-        <section
-          class="section bg-theme position-relative"
-          id="mission"
-          data-aos="fade-up"
-        >
-          <div class="container nk-df-over-up">
-            <div class="row align-items-center gutter-vr-30px">
-              <div class="col-lg-12 text-center text-lg-start">
-                <div class="oneBond_card_container">
-                  <div
-                    class="oneBond_card_info text-center"
-                    id="oneBond_mission_card"
-                    data-aos="fade-down"
-                  >
-                    <div class="particles">
-                      <div class="particle-zone particle-zone-top"></div>
-                      <div class="particle-zone particle-zone-bottom"></div>
+        <section class="section pb-0 bg-white">
+          <div class="container">
+            <!-- Section Head @s -->
+            <div class="section-head text-center wide-auto-sm section-head-s2">
+              <h4
+                class="title title-semibold animated"
+                data-animate="fadeInUp"
+                data-delay=".1"
+                title="Operations"
+              >
+                CORE AREAS OF OPERATIONS
+              </h4>
+            </div>
+            <!-- .section-head @e -->
+            <!-- Block @s -->
+            <div class="nk-block boxed boxed-xl bg-light-alt round-lg">
+              <div class="row gutter-vr-30px">
+                <div class="col-lg-6">
+                  <div class="feature feature-inline feature-s11">
+                    <div
+                      class="feature-icon custom-feature-icon feature-icon-lg-s3"
+                    >
+                      <img
+                        src="images/icons/features/investments.png"
+                        alt="feature"
+                      />
                     </div>
-                    <div class="oneBond_card_icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                      >
-                        <circle cx="12" cy="12" r="3"></circle>
-                        <path
-                          d="M13 4.069V2h-2v2.069A8.008 8.008 0 0 0 4.069 11H2v2h2.069A8.007 8.007 0 0 0 11 19.931V22h2v-2.069A8.007 8.007 0 0 0 19.931 13H22v-2h-2.069A8.008 8.008 0 0 0 13 4.069zM12 18c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6z"
-                        ></path>
-                      </svg>
+                    <div class="feature-text">
+                      <h5 class="title title-md">Investments</h5>
+                      <ul class="list list-dot">
+                        <li>
+                          <strong>Strategic Investments:</strong> WISH GROUP
+                          focuses on high-potential sectors.
+                        </li>
+                        <li>
+                          <strong>Maximizing Returns:</strong> The group aims to
+                          optimize financial returns through strategic choices.
+                        </li>
+                        <li>
+                          <strong>Sustainable Practices:</strong> Investments
+                          are made with a commitment to sustainability.
+                        </li>
+                      </ul>
                     </div>
-                    <h4 class="oneBond_card_info_title">Mission</h4>
-                    <p>
-                      We work to make their own wishes become true and achieve
-                      together to become number one capital company.
-                    </p>
                   </div>
-                  <div
-                    class="oneBond_card_info text-center"
-                    id="oneBond_values_card"
-                    data-aos="fade-right"
-                  >
-                    <div class="particles">
-                      <div class="particle-zone particle-zone-top"></div>
-                      <div class="particle-zone particle-zone-bottom"></div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature feature-inline feature-s11">
+                    <div
+                      class="feature-icon custom-feature-icon feature-icon-lg-s3"
+                    >
+                      <img
+                        src="images/icons/features/growth.png"
+                        alt="feature"
+                      />
                     </div>
-                    <div class="oneBond_card_icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 576 512"
-                      >
-                        <path
-                          d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                        />
-                      </svg>
+                    <div class="feature-text">
+                      <h5 class="title title-md">Growth</h5>
+                      <ul class="list list-dot">
+                        <li>
+                          <strong>Strategic Expansion:</strong> WISH GROUP
+                          focuses on expanding into emerging markets and
+                          high-growth sectors.
+                        </li>
+                        <li>
+                          <strong>Innovative Solutions:</strong> The group
+                          invests in cutting-edge technologies to stay
+                          competitive and drive innovation.
+                        </li>
+                        <li>
+                          <strong>Talent Development:</strong> Fostering a
+                          skilled workforce is key to sustainable growth, with
+                          an emphasis on training and leadership.
+                        </li>
+                      </ul>
                     </div>
-                    <h4 class="oneBond_card_info_title">Our Values</h4>
-                    <p>
-                      Treat our customers like human beings We do the right
-                      thing, right time Listen to all ideas for our customers
-                      and workers We must be good citizens for world Invest in
-                      each individual Create a better everyday life Help small
-                      business make better decisions Real Access Proprietary
-                      data & technology Strategists & design thinkers Real
-                      Outcomes, real time Validated product New Ideas with new
-                      begins Integration with banks Friendly strong Funding
-                      Worldwide Network Commercial arrangement
-                    </p>
                   </div>
-                  <div
-                    class="oneBond_card_info text-center"
-                    id="oneBond_integrity_card"
-                    data-aos="fade-left"
-                  >
-                    <div class="particles">
-                      <div class="particle-zone particle-zone-top"></div>
-                      <div class="particle-zone particle-zone-bottom"></div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature feature-inline feature-s11">
+                    <div
+                      class="feature-icon custom-feature-icon feature-icon-lg-s3"
+                    >
+                      <img
+                        src="images/icons/features/projects.png"
+                        alt="feature"
+                      />
                     </div>
-                    <div class="oneBond_card_icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 640 512"
-                      >
-                        <path
-                          d="M384 32l128 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L398.4 96c-5.2 25.8-22.9 47.1-46.4 57.3L352 448l160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-192 0-192 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l160 0 0-294.7c-23.5-10.3-41.2-31.6-46.4-57.3L128 96c-17.7 0-32-14.3-32-32s14.3-32 32-32l128 0c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32zm55.6 288l144.9 0L512 195.8 439.6 320zM512 416c-62.9 0-115.2-34-126-78.9c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1C627.2 382 574.9 416 512 416zM126.8 195.8L54.4 320l144.9 0L126.8 195.8zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1C242 382 189.7 416 126.8 416S11.7 382 .9 337.1z"
-                        />
-                      </svg>
+                    <div class="feature-text">
+                      <h5 class="title title-md">Projects</h5>
+                      <ul class="list list-dot">
+                        <li>
+                          <strong>Landmark Projects:</strong> WISH GROUP
+                          undertakes significant projects that transform urban
+                          landscapes.
+                        </li>
+                        <li>
+                          <strong>Community Enhancement:</strong> These projects
+                          aim to improve community well-being.
+                        </li>
+                        <li>
+                          <strong>Eco-Friendly Focus:</strong> A strong emphasis
+                          is placed on environmentally sustainable practices.
+                        </li>
+                      </ul>
                     </div>
-                    <h4 class="oneBond_card_info_title">Our Integrity</h4>
-                    <p>
-                      No one individual, no one deal, no one client, is bigger
-                      than our commitment to our company and what we stand for.
-                      Service: we approach our clients’ challenges with
-                      enthusiasm and diligence, building long-term relationships
-                      by connecting the right people, capital and opportunities.
-                      Excellence: we focus relentlessly on creating winning
-                      outcomes for our clients, employees and shareholders.
-                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature feature-inline feature-s11">
+                    <div
+                      class="feature-icon custom-feature-icon feature-icon-lg-s3"
+                    >
+                      <img
+                        src="images/icons/features/trading.png"
+                        alt="feature"
+                      />
+                    </div>
+                    <div class="feature-text">
+                      <h5 class="title title-md">Trading</h5>
+                      <ul class="list list-dot">
+                        <li>
+                          <strong>Global Trade Facilitation:</strong> WISH GROUP
+                          engages in international trade of commodities.
+                        </li>
+                        <li>
+                          <strong>Diverse Commodities:</strong> Key sectors
+                          include gas, petroleum products, and apparel.
+                        </li>
+                        <li>
+                          <strong>Established Partnerships:</strong> The group
+                          operates through a strong network of trusted partners.
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- .block @s -->
           </div>
-          <div class="mission-bg container-bg"></div>
         </section>
         <!-- // -->
 
         <!-- // -->
-        <section class="section" id="team" data-aos="fade-up">
+        <section class="section bg-white" id="team">
           <div class="ui-shape ui-shape-s5"></div>
           <div class="container">
             <!-- Section Head @s -->
-            <div class="section-head text-center wide-auto section-head-s2">
-              <h2 class="title title-xl" data-aos="fade-down" title="Team">
+            <div class="section-head text-center wide-auto-sm">
+              <h4
+                class="title title-semibold animated"
+                data-animate="fadeInUp"
+                data-delay=".1"
+              >
                 Meet Our Team
-              </h2>
+              </h4>
             </div>
             <!-- .section-head @e -->
             <!-- Block @s -->
             <div class="nk-block nk-block-team-list team-list">
-              <!-- .section-head @e -->
               <div class="row justify-content-center">
                 <div class="col-sm-6 col-lg-3">
-                  <div class="team team-s3" data-aos="fade-right">
+                  <div
+                    class="team team-s3 animated"
+                    data-animate="fadeInUp"
+                    data-delay=".3"
+                  >
                     <div class="team-photo round-full team-photo-bg">
                       <a
-                        href="#team-popup-5"
+                        href="#team-popup-1"
                         class="team-show content-popup"
                         data-overlay="bg-theme-grad-alt"
                       ></a>
@@ -350,7 +403,7 @@
                     </ul>
                   </div>
                   <!-- Start .team-profile  -->
-                  <div id="team-popup-5" class="team-popup mfp-hide">
+                  <div id="team-popup-1" class="team-popup mfp-hide">
                     <a title="Close" class="mfp-close">×</a>
                     <div class="row align-items-start">
                       <div class="col-md-6">
@@ -399,11 +452,15 @@
                   <!-- .team-profile  -->
                 </div>
                 <!-- .col -->
-                <div class="col-lg-3 col-sm-6">
-                  <div class="team team-s3" data-aos="fade-left">
+                <div class="col-sm-6 col-lg-3">
+                  <div
+                    class="team team-s3 animated"
+                    data-animate="fadeInUp"
+                    data-delay=".4"
+                  >
                     <div class="team-photo round-full team-photo-bg">
                       <a
-                        href="#team-popup-7"
+                        href="#team-popup-2"
                         class="team-show content-popup"
                         data-overlay="bg-theme-grad-alt"
                       ></a>
@@ -428,7 +485,7 @@
                     </ul>
                   </div>
                   <!-- Start .team-profile  -->
-                  <div id="team-popup-7" class="team-popup mfp-hide">
+                  <div id="team-popup-2" class="team-popup mfp-hide">
                     <a title="Close" class="mfp-close">×</a>
                     <div class="row align-items-start">
                       <div class="col-md-6">
@@ -476,95 +533,40 @@
                   </div>
                   <!-- .team-profile  -->
                 </div>
-                <!-- .col -->
               </div>
-              <!-- .row -->
             </div>
           </div>
         </section>
         <!-- // -->
 
         <!-- // -->
-        <section
-          class="section bg-theme bg-cover shape-r-bg"
-          id="contactUs"
-          data-aos="fade-up"
-        >
-          <div class="container">
-            <div class="text-center">
-              <div class="section-head section-head-s3 wide-auto-md">
-                <h6 class="title-xs tc-white" data-aos="fade-right">
-                  Let’s Build Your Future Together
-                </h6>
-                <h2 class="title" data-aos="fade-left">
-                  Connect with WISH Group – Turning Visions into Reality
-                </h2>
-              </div>
-              <a
-                href="#"
-                class="btn btn-rg btn-auto btn-grad on-bg-theme btn-round"
-                data-aos="fade-up"
-                ><span>Contact Us</span></a
-              >
-            </div>
-          </div>
-        </section>
-        <!-- // -->
-
-        <!-- // -->
-        <section class="section" id="ourCompany">
+        <section class="section bg-theme tc-light ov-h" id="contact">
           <div class="container">
             <!-- Block @s -->
-            <div class="nk-block">
-              <div class="row justify-content-center text-center">
-                <div class="col-xl-12">
-                  <div class="ourCompany-carousel-container" data-aos="fade-up">
-                    <div
-                      class="has-carousel ourCompany-carousel owl-carousel"
-                      data-items="1"
-                      data-items-mobile-s="1"
-                      data-margin="15"
-                      data-dots="true"
-                      data-nav="true"
-                      data-autoplay="true"
+            <div class="nk-block nk-block-text-wrap">
+              <div class="row align-items-center gutter-vr-30px">
+                <div class="col-lg-12 text-center">
+                  <div class="section-head section-head-s3 wide-auto-md">
+                    <h6
+                      class="title title-xs title-semibold animated"
+                      data-animate="fadeInUp"
+                      data-delay=".2"
                     >
-                      <div class="item">
-                        <img
-                          src="./images/our_companies/logo1.png"
-                          alt="company"
-                        />
-                        <h3>Our Company Secretary</h3>
-                        <p>
-                          Europe Emirates Group 3706-3707 Platinum Tower
-                          (Cluster I) Jumeirah Lakes Towers Po Box: 338482,
-                          Dubai, U.A.E
-                        </p>
-                      </div>
-                      <div class="item">
-                        <img
-                          src="./images/our_companies/logo2.png"
-                          alt="company"
-                        />
-                        <h3>Our Company Secretary</h3>
-                        <p>
-                          Europe Emirates Group 3706-3707 Platinum Tower
-                          (Cluster I) Jumeirah Lakes Towers Po Box: 338482,
-                          Dubai, U.A.E
-                        </p>
-                      </div>
-                      <div class="item">
-                        <img
-                          src="./images/our_companies/logo3.png"
-                          alt="company"
-                        />
-                        <h3>Our Company Secretary</h3>
-                        <p>
-                          Europe Emirates Group 3706-3707 Platinum Tower
-                          (Cluster I) Jumeirah Lakes Towers Po Box: 338482,
-                          Dubai, U.A.E
-                        </p>
-                      </div>
-                    </div>
+                      Let’s Build Your Future Together
+                    </h6>
+                    <h2
+                      class="animated"
+                      data-animate="fadeInUp"
+                      data-delay=".3"
+                    >
+                      Connect with WISH Group – Turning Visions into Reality
+                    </h2>
+                    <a
+                      href="#"
+                      class="btn btn-rg btn-auto btn-grad on-bg-theme btn-round"
+                      data-aos="fade-up"
+                      ><span>Contact Us</span></a
+                    >
                   </div>
                 </div>
                 <!-- .col -->
@@ -573,33 +575,173 @@
             </div>
             <!-- .block @e -->
           </div>
+          <div class="nk-ovm shape-n"></div>
         </section>
+        <!-- // -->
       </main>
-
       <!-- Footer -->
-      <footer class="nk-footer bg-theme">
-        <div class="section section-footer section-s tc-light bg-transparent">
+      <footer class="nk-footer bg-theme-grad-alt">
+        <section
+          class="section section-l section-footer pb-0 tc-light tc-light-alt bg-transparent ov-h"
+        >
+          <div class="ui-shape ui-shape-footer ui-shape-light"></div>
           <div class="container">
             <!-- Block @s -->
             <div class="nk-block block-footer">
-              <div class="row">
-                <div class="col">
-                  <div class="wgs wgs-text text-center">
-                    <div class="copyright-text copyright-text-s3 pdt-m">
-                      <p>
-                        <span class="d-sm-block"
-                          >Copyright &copy; 2022, One Bond. </span
-                        >All trademarks and copyrights belong to their
-                        respective owners.
-                      </p>
+              <div class="row my-md-0 mb-n4">
+                <div class="col-lg-3 col-sm-4">
+                  <div class="wgs wgs-menu">
+                    <h6
+                      class="wgs-title wgs-title-s2 text-white animated"
+                      data-animate="fadeInUp"
+                      data-delay=".1"
+                    >
+                      FEATURES
+                    </h6>
+                    <div class="wgs-body">
+                      <ul
+                        class="wgs-links wgs-links-uline wgs-links-s2 animated"
+                        data-animate="fadeInUp"
+                        data-delay=".2"
+                      >
+                        <li><a href="#">Live Chat</a></li>
+                        <li><a href="#">Email Marketing</a></li>
+                        <li><a href="#">User Analytics</a></li>
+                        <li><a href="#">User Analytics</a></li>
+                        <li><a href="#">Crypto Exchange</a></li>
+                      </ul>
                     </div>
                   </div>
                 </div>
+                <!-- .col -->
+                <div class="col-lg-3 col-sm-4">
+                  <div class="wgs wgs-menu">
+                    <h6
+                      class="wgs-title wgs-title-s2 text-white animated"
+                      data-animate="fadeInUp"
+                      data-delay=".3"
+                    >
+                      RESOURCES
+                    </h6>
+                    <div class="wgs-body">
+                      <ul
+                        class="wgs-links wgs-links-uline wgs-links-s2 animated"
+                        data-animate="fadeInUp"
+                        data-delay=".4"
+                      >
+                        <li><a href="#">Watch Demo</a></li>
+                        <li><a href="#">Whitepaper</a></li>
+                        <li><a href="#">Intigration &amp; API</a></li>
+                        <li><a href="#">iOS &amp; Android Apps</a></li>
+                        <li><a href="#">Privacy &amp; policy</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- .col -->
+                <div class="col-lg-3 col-sm-4">
+                  <div class="wgs wgs-menu">
+                    <h6
+                      class="wgs-title wgs-title-s2 text-white animated"
+                      data-animate="fadeInUp"
+                      data-delay=".5"
+                    >
+                      COMPANY
+                    </h6>
+                    <div class="wgs-body">
+                      <ul
+                        class="wgs-links wgs-links-uline wgs-links-s2 animated"
+                        data-animate="fadeInUp"
+                        data-delay=".6"
+                      >
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- .col -->
+                <div class="col-lg-3">
+                  <div class="wgs wgs-subscribe-form">
+                    <h6
+                      class="wgs-title wgs-title-s2 text-white animated"
+                      data-animate="fadeInUp"
+                      data-delay=".7"
+                    >
+                      NewsLetter
+                    </h6>
+                    <div class="wgs-body">
+                      <div class="wgs-subscribe">
+                        <p>
+                          Lorem ipsum dolor sit amet, cons ectetur adipiscing
+                          elit, sed
+                        </p>
+                        <form
+                          action="form/subscribe.php"
+                          class="nk-form-submit"
+                          method="post"
+                        >
+                          <div
+                            class="field-inline field-inline-s3 field-split animated"
+                            data-animate="fadeInUp"
+                            data-delay=".8"
+                          >
+                            <div class="field-wrap">
+                              <input
+                                class="input-bordered required"
+                                type="text"
+                                placeholder="Enter your email"
+                              />
+                              <input
+                                type="text"
+                                class="d-none"
+                                name="form-anti-honeypot"
+                                value=""
+                              />
+                            </div>
+                            <div class="submit-wrap">
+                              <button class="btn btn-icon btn-light btn-auto">
+                                <i class="fas fa-paper-plane"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="form-results"></div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- .col -->
               </div>
+              <!-- .row -->
+              <div class="footer-bottom section-sm">
+                <div class="row justify-content-between align-items-center">
+                  <div class="col-6">
+                    <a href="./" class="wgs-logo-s2">
+                      <img
+                        src="images/logo-full-white.png"
+                        srcset="images/logo-full-white2x.png 2x"
+                        alt="logo"
+                      />
+                    </a>
+                  </div>
+                  <!-- .col -->
+                  <div class="col-6">
+                    <div class="copyright-text text-end">
+                      <p>&copy; ICO Crypto, 2022</p>
+                    </div>
+                  </div>
+                  <!-- .col -->
+                </div>
+              </div>
+              <!-- .row -->
             </div>
             <!-- .block @e -->
           </div>
-        </div>
+        </section>
       </footer>
     </div>
     <!-- Preloader -->
@@ -608,12 +750,6 @@
     <script src="assets/js/jquery.bundle.js?ver=210"></script>
     <script src="assets/js/scripts.js?ver=210"></script>
     <script src="assets/js/charts.js?ver=210"></script>
-    <script src="assets/js/charts.js?ver=210"></script>
-    <script src="./assets/js/vendors/gsap/minified/gsap.min.js"></script>
-    <script src="./assets/js/vendors/gsap/minified/ScrollTrigger.min.js"></script>
-    <script src="./assets/js/vendors/aos.js"></script>
-    <script src="./assets/js/gsap-custom.js"></script>
-    <script src="./assets/js/aos-custom.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/toastr.examples.js?ver=210"></script>
   </body>
 </html>

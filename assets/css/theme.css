@@ -20,6 +20,14 @@ Theme	 :  Default
   }
 }
 
+/* custom header main */
+
+/* .custom-header-main{
+  position: absolute;
+  width: 100%;
+  background: #ffffff;
+} */
+
 /* custom container */
 
 .row-gap-40 {
@@ -121,14 +129,25 @@ Theme	 :  Default
 /* Our Story */
 
 .ourStoryImg {
-  border-radius: 100%;
-  width: 80%;
+  border-radius: 10px;
+  max-width: 560px;
 }
+
+/* .ourStoryImg {
+  border-radius: 10px;
+  background-image: url(../images/our_story/01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  max-width: 520px;
+} */
 
 .our_story-txt {
   text-align: justify;
 }
-
+/* 
 @media screen and (max-width: 1200px) {
   .ourStoryImg {
     width: 100%;
@@ -151,6 +170,16 @@ Theme	 :  Default
   .ourStoryImg {
     width: 70%;
   }
+} */
+
+/* custom features */
+
+.custom-feature-icon {
+  padding: 10px;
+  background: #fff;
+  border: 2px solid #f80d11c5;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 /* custom carousel */
