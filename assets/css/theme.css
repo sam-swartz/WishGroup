@@ -7,6 +7,16 @@ Theme	 :  Default
 
 /*! WRITE YOUR CUSTOM STYLE **/
 
+/* custom logo */
+.logo img {
+  height: 56px;
+}
+@media (min-width: 992px) {
+  .logo img {
+      height: 60px;
+  }
+} 
+
 /* custom text */
 .text-center-responsive-rev {
   text-align: center;
@@ -130,7 +140,7 @@ Theme	 :  Default
 
 .ourStoryImg {
   border-radius: 10px;
-  max-width: 560px;
+  /* max-width: 560px; */
 }
 
 /* .ourStoryImg {
