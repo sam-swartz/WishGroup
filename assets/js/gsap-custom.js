@@ -10,7 +10,7 @@ function initScrollAnimations() {
     endTrigger: ".our-business_section",
     end: "bottom top", 
     pin: true,
-    pinSpacing: false,
+    pinSpacing: false
   });
 
   sections.forEach((section, index) => {
