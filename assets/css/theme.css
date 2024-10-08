@@ -13,9 +13,9 @@ Theme	 :  Default
 }
 @media (min-width: 992px) {
   .logo img {
-      height: 60px;
+    height: 60px;
   }
-} 
+}
 
 /* custom text */
 .text-center-responsive-rev {
@@ -32,12 +32,12 @@ Theme	 :  Default
 
 /* Custom Button  */
 
-.custom-btn-primary{
+.custom-btn-primary {
   background-color: #fff !important;
   color: #36080b !important;
 }
 
-.custom-btn-primary:hover{
+.custom-btn-primary:hover {
   color: #fff !important;
   border: 2px solid #fff !important;
   background: transparent !important;
@@ -45,11 +45,11 @@ Theme	 :  Default
 
 /* custom header main */
 
-/* .custom-header-main{
+.custom-header-main {
   position: absolute;
   width: 100%;
   background: #ffffff;
-} */
+}
 
 /* custom container */
 
@@ -151,7 +151,7 @@ Theme	 :  Default
 
 /* Our Story */
 
-#ourStory .nk-block-img{
+#ourStory .nk-block-img {
   margin-bottom: 40px;
 }
 
@@ -220,7 +220,7 @@ Theme	 :  Default
 }
 
 .owl-dot.active {
-  background: #b10003d6  !important;
+  background: #b10003d6 !important;
 }
 
 @media screen and (min-width: 992px) {
@@ -779,7 +779,7 @@ Theme	 :  Default
 
 .project_img {
   width: 300px !important;
-  border-radius: 20px;
+  border-radius: 8px;
 }
 
 .project_info {
@@ -788,6 +788,11 @@ Theme	 :  Default
 
 #project .btn {
   padding: 20px 20px;
+}
+
+.project-img-wrap {
+  padding: 20px;
+  width: fit-content;
 }
 
 @media screen and (max-width: 991px) {
@@ -818,9 +823,6 @@ Theme	 :  Default
 }
 
 @media screen and (max-width: 576px) {
-  .project_img {
-    display: none !important;
-  }
   .project_card_wrap {
     margin-left: 0;
   }
