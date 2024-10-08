@@ -30,6 +30,19 @@ Theme	 :  Default
   }
 }
 
+/* Custom Button  */
+
+.custom-btn-primary{
+  background-color: #fff !important;
+  color: #36080b !important;
+}
+
+.custom-btn-primary:hover{
+  color: #fff !important;
+  border: 2px solid #fff !important;
+  background: transparent !important;
+}
+
 /* custom header main */
 
 /* .custom-header-main{
@@ -138,9 +151,17 @@ Theme	 :  Default
 
 /* Our Story */
 
+#ourStory .nk-block-img{
+  margin-bottom: 40px;
+}
+
 .ourStoryImg {
-  border-radius: 10px;
-  /* max-width: 560px; */
+  /* border-radius: 10px;
+  max-width: 560px; */
+  border-radius: 100%;
+  width: 50%;
+  border: 2px solid #f80d11c5;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 /* .ourStoryImg {
@@ -157,10 +178,10 @@ Theme	 :  Default
 .our_story-txt {
   text-align: justify;
 }
-/* 
+
 @media screen and (max-width: 1200px) {
   .ourStoryImg {
-    width: 100%;
+    width: 70%;
   }
 }
 
@@ -180,7 +201,7 @@ Theme	 :  Default
   .ourStoryImg {
     width: 70%;
   }
-} */
+}
 
 /* custom features */
 
@@ -195,11 +216,11 @@ Theme	 :  Default
 /* custom carousel */
 
 .owl-dot {
-  background: #ffc107 !important;
+  background: #f80d11c5 !important;
 }
 
 .owl-dot.active {
-  background: #ff9800 !important;
+  background: #b10003d6  !important;
 }
 
 @media screen and (min-width: 992px) {
