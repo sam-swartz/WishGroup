@@ -838,6 +838,47 @@ Theme	 :  Default
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+#trading .oneBond_card_container {
+  display: grid;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#trading .oneBond_card_info {
+  background: linear-gradient(145deg, #f80d11c5, #f80d11a5);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.141);
+}
+
+#trading .oneBond_card_info::before {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+#trading .oneBond_card_info:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+#trading .oneBond_card_icon {
+  fill: #ffead6; /* Lighter coral for icon */
+}
+
+#trading .oneBond_card_info #trading .oneBond_card_info_title {
+  color: #ffffff; /* White for title contrast */
+}
+
+#trading .oneBond_card_info #trading .oneBond_card_info_title::after {
+  background: #ffffff; /* White underline for title */
+}
+
+#trading .oneBond_card_info:hover #trading .oneBond_card_info_title::after {
+  width: 100%; /* Full underline on hover */
+}
+
 @media screen and (max-width: 991px) {
   #trading .oneBond_card_container {
     grid-template-columns: repeat(2, 1fr);
@@ -945,3 +986,5 @@ Theme	 :  Default
     width: 40%;
   }
 }
+
+/* custom GSAP */
