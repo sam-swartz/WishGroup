@@ -73,6 +73,9 @@ Theme	 :  Default
 }
 
 /* custom container */
+.z-index-1{
+  z-index: 1 !important;
+}
 
 .row-gap-40 {
   row-gap: 40px;
@@ -1017,6 +1020,9 @@ Theme	 :  Default
   }
   .our-business_section .our_business_img img {
     width: 40%;
+  }
+  .title-xl {
+    font-size: 2rem;
   }
 }
 
