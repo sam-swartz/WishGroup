@@ -1,4 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
 
 function initDesktopAnimations() {
   const sections = gsap.utils.toArray('.our-business_section');
@@ -59,30 +60,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 function initMobileAnimations() {
   const sections = gsap.utils.toArray('.our-business_section');
-  const banner = document.querySelector('.our-business_banner');
-
+  
   // Reset any previous transformations
-  gsap.set(".our-business_banner, .our-business_section, .content", { clearProps: "all" });
+  gsap.set(".our-business_section, .title-xl, .title-semibold, .our_business_para, .our_business_img img", { clearProps: "all" });
 
-  // Animate banner with a subtle parallax effect
-  gsap.from(banner, {
-    opacity: 0,
-    y: 50,
-    duration: 1.2,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: banner,
-      start: "top 90%",
-      end: "bottom 10%",
-      toggleActions: "play none none reverse",
-      scrub: 0.5
-    }
-  });
-
-  // Animate sections with stagger and parallax effects
   sections.forEach((section, index) => {
-    const content = section.querySelector('.content');
-    const image = section.querySelector('img'); // Assuming there's an image in each section
+    const title = section.querySelector('.title-xl');
+    const subtitle = section.querySelector('.title-semibold');
+    const paragraph = section.querySelector('.our_business_para');
+    const image = section.querySelector('.our_business_img img');
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -97,36 +83,81 @@ function initMobileAnimations() {
       opacity: 0,
       duration: 0.8,
       ease: "power2.out"
-    })
-    .from(content, {
-      y: 50,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power2.out"
-    }, "-=0.4")
-    .from(image, {
-      scale: 1.1,
-      opacity: 0,
-      duration: 1,
-      ease: "power2.out"
-    }, "-=0.6");
-
-    // Add a more pronounced parallax effect
-    gsap.to(content, {
-      y: () => -section.offsetHeight * 0.1, // Move up to 10% of section height
-      ease: "none",
-      scrollTrigger: {
-        trigger: section,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: 1
-      }
     });
 
-    // Add a subtle scale effect to images
+    if (title) {
+      tl.from(title, {
+        y: 30,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.out"
+      }, "-=0.4");
+
+      // Parallax effect for title
+      gsap.to(title, {
+        y: () => -section.offsetHeight * 0.03, // Move up to 3% of section height
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1
+        }
+      });
+    }
+
+    if (subtitle) {
+      tl.from(subtitle, {
+        y: 20,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.out"
+      }, "-=0.4");
+
+      // Parallax effect for subtitle
+      gsap.to(subtitle, {
+        y: () => -section.offsetHeight * 0.02, // Move up to 2% of section height
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1
+        }
+      });
+    }
+
+    if (paragraph) {
+      tl.from(paragraph, {
+        y: 20,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.out"
+      }, "-=0.4");
+
+      // Parallax effect for paragraph
+      gsap.to(paragraph, {
+        y: () => -section.offsetHeight * 0.01, // Move up to 1% of section height
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1
+        }
+      });
+    }
+
     if (image) {
+      tl.from(image, {
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      }, "-=0.6");
+
+      // Enhanced parallax effect for image
       gsap.to(image, {
-        scale: 1.05,
+        y: () => -section.offsetHeight * 0.05, // Move up to 5% of section height
         ease: "none",
         scrollTrigger: {
           trigger: section,
@@ -138,29 +169,39 @@ function initMobileAnimations() {
     }
   });
 
-  // Animate footer with a fade-in and slide-up effect
-  gsap.from("footer", {
-    opacity: 0,
-    y: 30,
-    duration: 1,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: "footer",
-      start: "top 95%",
-      end: "bottom bottom",
-      toggleActions: "play none none reverse"
-    }
-  });
+  // Animate the banner separately if it exists
+  const banner = document.querySelector('.our-business_banner');
+  if (banner) {
+    gsap.from(banner, {
+      opacity: 0,
+      y: 30,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: banner,
+        start: "top 90%",
+        end: "bottom 10%",
+        toggleActions: "play none none reverse"
+      }
+    });
+  }
 
-  // Add a smooth scroll effect
-  gsap.to(window, {
-    duration: 1.5,
-    scrollTo: {
-      y: "#target-element", // Replace with your target element's selector
-      autoKill: false
-    },
-    ease: "power3.inOut"
-  });
+  // Animate footer
+  const footer = document.querySelector('footer');
+  if (footer) {
+    gsap.from(footer, {
+      opacity: 0,
+      y: 30,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: footer,
+        start: "top 95%",
+        end: "bottom bottom",
+        toggleActions: "play none none reverse"
+      }
+    });
+  }
 }
 
 function handleResize() {
