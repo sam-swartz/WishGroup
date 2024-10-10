@@ -1068,7 +1068,7 @@ Theme	 :  Default
 }
 
 .leaflet-control-attribution{
-  display: n;
+  display: none;
 }
 .custom-icon {
   display: flex;
