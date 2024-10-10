@@ -236,28 +236,34 @@ window.addEventListener('resize', handleResize);
 handleResize(); // Call once to set initial state
 
 $(document).ready(function() {
-    // Light 3D tilt effect with dynamic shadow for map div
+    // Smooth 3D tilt effect with dynamic shadow
     $('#map').on('mousemove', function(e) {
         var map = $(this);
         var mapRect = map[0].getBoundingClientRect();
         var mapCenterX = mapRect.left + mapRect.width / 2;
         var mapCenterY = mapRect.top + mapRect.height / 2;
-        var angleY = -(e.clientX - mapCenterX) / 75;
-        var angleX = (e.clientY - mapCenterY) / 75;
 
-        // Calculate shadow offset based on mouse position
-        var shadowX = (e.clientX - mapCenterX) / 50;
-        var shadowY = (e.clientY - mapCenterY) / 50;
-        var shadowBlur = Math.abs(shadowX) + Math.abs(shadowY);
+        // Adjusting max rotation to avoid extreme flips
+        var maxRotation = 15;
+        var angleY = Math.max(Math.min(-(e.clientX - mapCenterX) / 50, maxRotation), -maxRotation);
+        var angleX = Math.max(Math.min((e.clientY - mapCenterY) / 50, maxRotation), -maxRotation);
+
+        // Calculate smooth shadow offset
+        var shadowX = (e.clientX - mapCenterX) / 40;
+        var shadowY = (e.clientY - mapCenterY) / 40;
+        var shadowBlur = 40 + Math.abs(shadowX) + Math.abs(shadowY);
 
         map.css({
-            'transform': `perspective(3000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(10px)`,
-            'box-shadow': `${shadowX}px ${shadowY}px ${shadowBlur}px rgba(0,0,0,0.3)`
+            'transform': `perspective(3000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(15px)`,
+            'box-shadow': `${shadowX}px ${shadowY}px ${shadowBlur}px rgba(0, 0, 0, 0.25)`
         });
     }).on('mouseleave', function() {
         $(this).css({
             'transform': 'perspective(3000px) rotateX(0) rotateY(0) translateZ(0)',
-            'box-shadow': '0px 0px 10px rgba(0,0,0,0.3)'
+            'box-shadow': '0px 0px 20px rgba(0, 0, 0, 0.2)',
+            'transition': 'transform 0.5s ease, box-shadow 0.5s ease'
         });
     });
 });
+
+
