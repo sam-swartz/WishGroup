@@ -1066,6 +1066,10 @@ Theme	 :  Default
 .leaflet-popup-close-button {
   color: rgba(248, 13, 17, 0.773) !important;
 }
+
+.leaflet-control-attribution{
+  display: n;
+}
 .custom-icon {
   display: flex;
   justify-content: center;
