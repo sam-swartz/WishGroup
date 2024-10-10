@@ -145,37 +145,37 @@ const locations = [
         name: "Maldives",
         address: "M. Gulfaamuge, 1st Floor, Fareedhee Magu, Male City, 2019, Maldives",
         coordinates: [4.1755, 73.5093],
-        imageUrl: "../images/map-location/maldives-location.png"
+        imageUrl: "./images/map-location/maldives-location.png"
     },
     {
         name: "Ghana",
         address: "17, Swaniker street, albelemkpe, Accra, Greater Accra, Ghana",
         coordinates: [5.6037, -0.1870],
-        imageUrl: "../images/map-location/ghana-location.png"
+        imageUrl: "./images/map-location/ghana-location.png"
     },
     {
         name: "South Africa",
         address: "76 HAZEL ROAD RYLANDS ESTATE ATHLONE CAPE TOWN 7764",
         coordinates: [-33.9249, 18.4241],
-        imageUrl: "../images/map-location/south-africa-location.png"
+        imageUrl: "./images/map-location/south-africa-location.png"
     },
     {
         name: "London",
         address: "9A Macdonald road, E7 OHE, London, United Kingdom.",
         coordinates: [51.5074, -0.1278],
-        imageUrl: "../images/map-location/london-location.png"
+        imageUrl: "./images/map-location/london-location.png"
     },
     {
         name: "Malaysia",
         address: "Unit 16.03 & 16.04, 16th Floor Plaza 138, 138 Jalan Ampang 50450 Kuala Lumpur",
         coordinates: [3.1390, 101.6869],
-        imageUrl: "../images/map-location/malaysia-location.png"
+        imageUrl: "./images/map-location/malaysia-location.png"
     },
     {
         name: "Sri Lanka",
         address: "No. 17/2, Duplication Road, Bambalapitiya, Colombo 04",
         coordinates: [6.9271, 79.8612],
-        imageUrl: "../images/map-location/sri-lanka-location.png"
+        imageUrl: "./images/map-location/sri-lanka-location.png"
     }
 ];
 
