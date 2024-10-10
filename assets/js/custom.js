@@ -139,43 +139,43 @@ const locations = [
         name: "Dubai",
         address: "4004/4005, 40th floor, Citadel Tower, Al Marasi Drive Business Bay, P.O.BOX 417425, DUBAI, UAE",
         coordinates: [25.2048, 55.2708],
-        imageUrl: "https://example.com/dubai-image.jpg"
+        imageUrl: "./images/map-location/dubai-location.png"
     },
     {
         name: "Maldives",
         address: "M. Gulfaamuge, 1st Floor, Fareedhee Magu, Male City, 2019, Maldives",
         coordinates: [4.1755, 73.5093],
-        imageUrl: "https://example.com/maldives-image.jpg"
+        imageUrl: "../images/map-location/maldives-location.png"
     },
     {
         name: "Ghana",
         address: "17, Swaniker street, albelemkpe, Accra, Greater Accra, Ghana",
         coordinates: [5.6037, -0.1870],
-        imageUrl: "https://example.com/ghana-image.jpg"
+        imageUrl: "../images/map-location/ghana-location.png"
     },
     {
         name: "South Africa",
         address: "76 HAZEL ROAD RYLANDS ESTATE ATHLONE CAPE TOWN 7764",
         coordinates: [-33.9249, 18.4241],
-        imageUrl: "https://example.com/south-africa-image.jpg"
+        imageUrl: "../images/map-location/south-africa-location.png"
     },
     {
         name: "London",
         address: "9A Macdonald road, E7 OHE, London, United Kingdom.",
         coordinates: [51.5074, -0.1278],
-        imageUrl: "https://example.com/london-image.jpg"
+        imageUrl: "../images/map-location/london-location.png"
     },
     {
         name: "Malaysia",
         address: "Unit 16.03 & 16.04, 16th Floor Plaza 138, 138 Jalan Ampang 50450 Kuala Lumpur",
         coordinates: [3.1390, 101.6869],
-        imageUrl: "https://example.com/malaysia-image.jpg"
+        imageUrl: "../images/map-location/malaysia-location.png"
     },
     {
         name: "Sri Lanka",
         address: "No. 17/2, Duplication Road, Bambalapitiya, Colombo 04",
         coordinates: [6.9271, 79.8612],
-        imageUrl: "https://example.com/sri-lanka-image.jpg"
+        imageUrl: "../images/map-location/sri-lanka-location.png"
     }
 ];
 
@@ -205,7 +205,7 @@ locations.forEach(location => {
     const marker = L.marker(location.coordinates, {icon: customIcon}).addTo(map);
     
     const popupContent = `
-        <img src="${location.imageUrl}" alt="${location.name}" class="location-image">
+        <div class="location-image" style="background-image: url('${location.imageUrl}');"></div>
         <div class="location-name">${location.name}</div>
         <div class="location-address">${location.address}</div>
     `;
