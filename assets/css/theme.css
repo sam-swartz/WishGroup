@@ -1305,7 +1305,7 @@ Theme	 :  Default
 .bento-container.UAE .country-group.address-count-8 .country-content,
 .bento-container.Sri.Lanka .country-group.address-count-20 .country-content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 @media (max-width: 1200px) {
@@ -1314,6 +1314,10 @@ Theme	 :  Default
   }
   .country-group.address-count-20 .country-content {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .bento-container.UAE .country-group.address-count-8 .country-content,
+  .bento-container.Sri.Lanka .country-group.address-count-20 .country-content {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 992px) {
