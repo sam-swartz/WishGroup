@@ -267,3 +267,270 @@ $(document).ready(function() {
 });
 
 
+// Bento Box - Branches list
+
+// $(document).ready(function() {
+//     $('#filterSelect').select2({
+
+//       dropdownAutoWidth: true
+//     });
+//   });
+
+$(document).ready(function () {
+    const branches = [
+      {
+        name: "Prime Wish Trading LLC",
+        address:
+          "4004/4005, 40th floor, Citadel Tower, Al Marasi Drive Business Bay, PO BOX 417425, DUBAI, UAE",
+        featured: true,
+        country: "UAE",
+      },
+      {
+        name: "Wish Hotel LLC (UAE)",
+        address:
+          "4004/4005, 40th floor, Citadel Tower, Al Marasi Drive Business Bay, PO BOX 417425, DUBAI, UAE",
+        country: "UAE",
+      },
+      {
+        name: "Wish Hospitality Services LLC (UAE)",
+        address:
+          "4004/4005, 40th floor, Citadel Tower, Al Marasi Drive Business Bay, PO BOX 417425, DUBAI, UAE",
+        country: "UAE",
+      },
+      {
+        name: "Wish Group Investment (UAE)",
+        address:
+          "4004/4005, 40th floor, Citadel Tower, Al Marasi Drive Business Bay, PO BOX 417425, DUBAI, UAE",
+        country: "UAE",
+      },
+      {
+        name: "Wish Bond Commercial Broker LLC (UAE)",
+        address:
+          "4004/4005, 40th floor, Citadel Tower, Al Marasi Drive Business Bay, PO BOX 417425, DUBAI, UAE",
+        country: "UAE",
+      },
+      {
+        name: "Wish Capital (PVT) LTD (Ghana)",
+        address:
+          "17, Spintex street, abheemope, Accra, Greater Accra, Ghana",
+        country: "Ghana",
+      },
+      {
+        name: "Wish Capital (PVT) LTD (SOUTH AFRICA)",
+        address: "76 Henri Road, Richards Estate Athlone Cape Town 7764",
+        country: "South Africa",
+      },
+      {
+        name: "World Capital Center LTD (MALAYSIA)",
+        address:
+          "Unit 16.03 & 16.04, 16th Floor Plaza 138. 138 Jalan Ampang 50450 Kuala Lumpur",
+        country: "Malaysia",
+      },
+      {
+        name: "World Capital Center LTD (United Kingdom)",
+        address: "83A Macdonald road, E7 0HH, London, United Kingdom",
+        country: "United Kingdom",
+      },
+      {
+        name: "World Capital Center LTD (Maldives)",
+        address:
+          "M. Gulheemuge, 01st Floor, Fareedhee Magu, Male City, 20ri, Maldives",
+        country: "Maldives",
+      },
+      {
+        name: "World Investment Sources Holdings LTD. (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "World Capital Center LTD. (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "Wish Brands (PVT) LTD. (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "Wish Hospitality LTD. (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "Prime Wish (PVT). (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "Wish Capital (PVT) LTD. (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "The One Apparel Corporation LTD. (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "Arena Blue Hotel and Resort LTD. (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "Wish Roamer (PVT) LTD. (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "Wish Farm LLC Al Ain (UAE)",
+        address:
+          "4004/4005, 40th floor, Citadel Tower, Al Marasi Drive Business Bay, PO BOX 417425, DUBAI, UAE",
+        country: "UAE",
+      },
+      {
+        name: "Lincmo International FEZC Ajman (UAE)",
+        address:
+          "4004/4005, 40th floor, Citadel Tower, Al Marasi Drive Business Bay, PO BOX 417425, DUBAI, UAE",
+        country: "UAE",
+      },
+      {
+        name: "Al Aman Capital Group (LTD) (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "Wish Media Corporation (LTD)",
+        address:
+          "4004/4005, 40th floor, Citadel Tower, Al Marasi Drive Business Bay, PO BOX 417425, DUBAI, UAE",
+        country: "UAE",
+      },
+      {
+        name: "Aman Brands (PVT) (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "Wish Town Development (LTD) (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "Wish Real Estate Developer (LTD) (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "Wish HR Consultancy (PVT) (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "Wish Finance (LTD) (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "World Free-zone Center (LTD) (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "Wish Service Apartment (LTD) (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "Wish Frame (LTD) (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "Wish Energy (LTD) (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+      {
+        name: "Wish Medical (LTD) (SRI LANKA)",
+        address: "No. 1712, Duplication Road, Bambalapitiya, Colombo 04",
+        country: "Sri Lanka",
+      },
+    ];
+
+    const countries = [
+      ...new Set(branches.map((branch) => branch.country)),
+    ].sort();
+    countries.forEach((country) => {
+      $("#filterSelect").append($("<option>").val(country).text(country));
+    });
+
+    $("#filterSelect").on("change", function () {
+      var selectedValue = $(this).val(); // Get the selected value
+      var $bentoContainer = $(".bento-container"); // Target the div
+
+      // Replace the class with the new selected value
+      $bentoContainer.attr("class", "bento-container " + selectedValue);
+    });
+
+    function renderBranches(filteredBranches) {
+      $("#bentoContainer").empty();
+
+      const groupedBranches = groupByCountry(filteredBranches);
+
+      Object.entries(groupedBranches).forEach(([country, branches]) => {
+        const $countryGroup = $("<div>")
+          .addClass("country-group")
+          .addClass(`address-count-${branches.length}`);
+        const $countryHeader = $("<div>")
+          .addClass("country-header")
+          .append($("<span>").text(country))
+          .append(
+            $("<span>").addClass("branch-count").text(branches.length)
+          );
+        $countryGroup.append($countryHeader);
+
+        const $countryContent = $("<div>").addClass("country-content");
+
+        branches.forEach((branch, index) => {
+          const $item = $("<div>").addClass("bento-item");
+          if (branch.featured) {
+            $item.addClass("featured");
+          }
+          $item.append($("<h3>").text(branch.name));
+          $item.append($("<p>").text(branch.address));
+          $countryContent.append($item);
+        });
+
+        $countryGroup.append($countryContent);
+        $("#bentoContainer").append($countryGroup);
+      });
+    }
+
+    function groupByCountry(branches) {
+      return branches.reduce((acc, branch) => {
+        (acc[branch.country] = acc[branch.country] || []).push(branch);
+        return acc;
+      }, {});
+    }
+
+    function filterBranches() {
+      const searchTerm = $("#searchInput").val().toLowerCase();
+      const selectedCountry = $("#filterSelect").val();
+
+      const filteredBranches = branches.filter((branch) => {
+        const matchesSearch =
+          branch.name.toLowerCase().includes(searchTerm) ||
+          branch.address.toLowerCase().includes(searchTerm);
+        const matchesCountry =
+          selectedCountry === "all" || branch.country === selectedCountry;
+        return matchesSearch && matchesCountry;
+      });
+
+      renderBranches(filteredBranches);
+    }
+
+    $("#searchInput, #filterSelect").on("input change", filterBranches);
+
+    // Initial render
+    renderBranches(branches);
+  });
