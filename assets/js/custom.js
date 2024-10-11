@@ -269,12 +269,6 @@ $(document).ready(function() {
 
 // Bento Box - Branches list
 
-// $(document).ready(function() {
-//     $('#filterSelect').select2({
-
-//       dropdownAutoWidth: true
-//     });
-//   });
 
 $(document).ready(function () {
     const branches = [
