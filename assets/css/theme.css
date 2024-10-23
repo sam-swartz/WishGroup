@@ -55,6 +55,10 @@ Theme	 :  Default
 .custom-header .custom-header-main {
   background: #fff;
 }
+.header-banner{
+  position: relative;
+  z-index: 2;
+}
 @media (min-width: 992px) {
   .custom-header .custom-header-main .menu-link {
     color: #36080b !important;
@@ -802,14 +806,14 @@ Theme	 :  Default
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
   overflow: hidden;
 }
 
 .bg-shape {
   position: absolute;
-  opacity: 0.25;
+  opacity: 0.30;
   /* Increased base opacity */
   transition: all 0.5s ease;
   filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.1));
