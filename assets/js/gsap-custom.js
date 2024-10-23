@@ -1,6 +1,8 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
+// Our Business
+
 function initDesktopAnimations() {
   const sections = gsap.utils.toArray('.our-business_section');
   
@@ -54,9 +56,6 @@ function initDesktopAnimations() {
     onLeaveBack: () => gsap.to("footer", { opacity: 0, duration: 0.5 })
   });
 }
-
-gsap.registerPlugin(ScrollTrigger);
-
 
 function initMobileAnimations() {
   const sections = gsap.utils.toArray('.our-business_section');
@@ -228,3 +227,7 @@ if (window.innerWidth > 768) {
 
 // Add resize event listener
 window.addEventListener('resize', gsap.debounce(handleResize, 250));
+
+
+
+// sticky bottom
