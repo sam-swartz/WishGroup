@@ -980,6 +980,21 @@ Theme	 :  Default
   .background-container .shape-5 {
     animation-duration: 5s;  /* Reduced from 10s */
   }
+
+  .icon-wrap.bg-shape em {
+    font-size: 4rem;
+    color: #f80d11b5;
+  }
+}
+
+@media (max-width: 576px) {
+  .background-container .shape-5 {
+    display: none;
+  }
+
+  .icon-wrap.bg-shape em {
+    font-size: 3rem;
+    color: #f80d11b5;
 }
 
 /* Our Project */
