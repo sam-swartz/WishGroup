@@ -90,6 +90,11 @@ Theme	 :  Default
   z-index: 2 !important;
 }
 
+.z-index-999 {
+  position: relative;
+  z-index: 999 !important;
+}
+
 .row-gap-40 {
   row-gap: 40px;
 }
