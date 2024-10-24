@@ -55,10 +55,10 @@ Theme	 :  Default
 .custom-header .custom-header-main {
   background: #fff;
 }
-.header-banner{
+/* .header-banner{
   position: relative;
   z-index: 2;
-}
+} */
 @media (min-width: 992px) {
   .custom-header .custom-header-main .menu-link {
     color: #36080b !important;
@@ -84,6 +84,10 @@ Theme	 :  Default
 /* custom container */
 .z-index-1 {
   z-index: 1 !important;
+}
+.z-index-2 {
+  position: relative;
+  z-index: 2 !important;
 }
 
 .row-gap-40 {
@@ -817,7 +821,6 @@ Theme	 :  Default
   filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.2));
 }
 
-/* Responsive shape sizes using clamp() */
 .background-container .shape-1 {
   top: 10%;
   left: 0;
