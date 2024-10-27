@@ -810,7 +810,7 @@ Theme	 :  Default
 }
 
 .background-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -818,14 +818,17 @@ Theme	 :  Default
   z-index: 1;
   pointer-events: none;
   overflow: hidden;
-  background: #f8f9fa;
+}
+
+.background-container-fixed{
+  position: fixed;
 }
 
 .bg-shape {
   position: absolute;
   opacity: 0.2;
-  transition: all 0.2s ease; /* Faster transition */
-  filter: drop-shadow(0 0 12px rgba(255, 107, 107, 0.4)); /* Enhanced shadow */
+  transition: all 0.2s ease;
+  filter: drop-shadow(0 0 12px rgba(255, 107, 107, 0.4));
 }
 
 .icon-wrap.bg-shape em {
@@ -963,14 +966,14 @@ Theme	 :  Default
 }
 
 .bg-shape:hover {
-  opacity: 0.6;  /* Increased from 0.4 */
+  opacity: 0.6; 
   filter: drop-shadow(0 0 16px rgba(255, 107, 107, 0.5));
   transition: all 0.2s ease;
 }
 
 @media (max-width: 768px) {
   .bg-shape {
-    opacity: 0.3;  /* Increased from 0.2 */
+    opacity: 0.3;
   }
   
   .background-container .shape-1,
@@ -978,12 +981,11 @@ Theme	 :  Default
   .background-container .shape-3,
   .background-container .shape-4,
   .background-container .shape-5 {
-    animation-duration: 5s;  /* Reduced from 10s */
+    animation-duration: 5s;
   }
 
   .icon-wrap.bg-shape em {
     font-size: 4rem;
-    color: #f80d11b5;
   }
 }
 
@@ -994,7 +996,7 @@ Theme	 :  Default
 
   .icon-wrap.bg-shape em {
     font-size: 3rem;
-    color: #f80d11b5;
+  }
 }
 
 /* Our Project */
