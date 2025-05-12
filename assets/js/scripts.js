@@ -1,9 +1,6 @@
-/*!
- * ICOCrypto v2.1.0 by Softnio.
-**/
 var NioApp = (function (jQ, win, doc){
     "use strict";
-    var NioApp = {AppInfo: {name: "ICOCrypto", package: "2.1.0", version: "2.1.0", author: "Softnio"} },
+    var NioApp = {AppInfo: {name: "swartz", package: "2.1.0", version: "2.1.0", author: "swartz"} },
         components = {docReady: [], docReadyDefer: [], winLoad: [], winLoadDefer: []};
 
     jQ(doc).ready(docReady);

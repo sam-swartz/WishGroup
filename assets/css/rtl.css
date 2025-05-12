@@ -1,10 +1,3 @@
-/*!
- * Theme Name: ICOCrypto
- * Author: Softnio
- * Version   :  2.1.0
- * Updated   :  11/22/2022
- * RTL Support
-**/
 .banner-screen { left: auto; right: 50%; transform: translateX(50%); }
 
 .banner-rounded-bg { right: auto; left: 390px; border-radius: 0 0 0 250px; transform: rotate(8deg) skew(-10deg); transform-origin: top left; padding: 0 0 110px 120px; }

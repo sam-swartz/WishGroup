@@ -1,6 +1,3 @@
-/*!
- * Charts - ICOCrypto v2.1.0 by Softnio.
-**/
 NioApp = (function (NioApp, $, window) {
     "use strict";
 	var $chart = $('.chart-data'), $chart_s2 = $('.chart-data-s2'), $chart_s1 = $('.chart-data-s1');
